@@ -3,13 +3,14 @@ import { Hero } from "../blocks/Hero";
 import { MenuOption } from "../blocks/MenuOption";
 import { PersonalizacionFeature } from "../blocks/Personalizacion";
 import { GlobalConfig } from "payload/types";
+import { isAdmin } from "../access/usersAccess";
 
 
 export const LandingPage:GlobalConfig = {
     slug: 'landing',
     access: {
         read: () => true,
-        update: ()=>true,
+        update: isAdmin,
     },
     fields: [
         {

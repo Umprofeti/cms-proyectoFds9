@@ -1,12 +1,13 @@
 import { CollectionConfig } from "payload/types";
+import { isUserAppOrAdmin, isAdmin } from "../access/usersAccess";
 
 export const Pedidos:CollectionConfig = {
     slug: 'pedidos',
     access: {
-        read: ()=> true,
-        delete: ()=> true,
-        update: ()=> true,
-        create: ()=> true
+        read: isUserAppOrAdmin,
+        delete: isAdmin,
+        update: isAdmin,
+        create: isUserAppOrAdmin
     },
     fields: [
         {

@@ -1,4 +1,6 @@
+import { isAdmin, isUserAppOrAdmin, isUserApp } from "../access/usersAccess";
 import { CollectionConfig } from "payload/types";
+
 
 export const UsersApp: CollectionConfig = {
     slug: 'users-app',
@@ -6,8 +8,11 @@ export const UsersApp: CollectionConfig = {
     access: {
         read: () => true,
         create: () => true,
-        delete: () => true,
-        update: () => true
+        delete: isAdmin,
+        update: isUserAppOrAdmin
+    },
+    admin: {
+        useAsTitle: 'UserName',
     },
     fields: [
         {
