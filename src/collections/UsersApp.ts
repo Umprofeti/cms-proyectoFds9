@@ -19,22 +19,18 @@ export const UsersApp: CollectionConfig = {
             type: 'upload',
             name: 'UserImage',
             relationTo: 'media',
-            required: true
         },
         {
             type: 'text',
             name: 'Nombre',
-            required: true
         },
         {
             type: 'text',
             name: 'Apellido',
-            required: true
         },
         {
             type: 'number',
             name: 'Edad',
-            required: true
         },
         {
             type: 'text',
@@ -43,12 +39,10 @@ export const UsersApp: CollectionConfig = {
         {
             type: 'text',
             name: 'UserName',
-            required: true
         },
         {
             type: 'text',
             name: 'Pais',
-            required: true
         },
         {
             type: 'row',

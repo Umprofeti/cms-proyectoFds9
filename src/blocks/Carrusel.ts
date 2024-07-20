@@ -8,7 +8,8 @@ export const Carrusel: Block = {
             type: 'relationship',
             relationTo: 'category',
             required: true,
-            name: 'ItemsCarrusel'
+            name: 'ItemsCarrusel',
+            hasMany: true
         }
     ]
 }

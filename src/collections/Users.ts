@@ -11,6 +11,7 @@ const Users: CollectionConfig = {
   },
   auth: {
     tokenExpiration: 3600,
+    
   },
   admin: {
     useAsTitle: 'email',
